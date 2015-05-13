@@ -23,11 +23,9 @@ public class FilipTheFrog {
 		if(!isIsland(positions, curr)) return 0;
 		visit.add(curr);
 		int count = 1;
-		for(int i = 0; i < positions.length; i++) {
-			for(int j = 1; j <= L; j++) {
-				count += countReachable(curr + j, max, min, positions, visit, L);
-				count += countReachable(curr - j, max, min, positions, visit, L);
-			}
+		for(int j = 1; j <= L; j++) {
+			count += countReachable(curr + j, max, min, positions, visit, L);
+			count += countReachable(curr - j, max, min, positions, visit, L);
 		}
 		return count;
 	}
