@@ -30,4 +30,14 @@ public class FilipTheFrogTest {
 		int L = 1000;
 		assertEquals(1, new FilipTheFrog().countReachableIslands(positions, L));
 	}
+
+	@Test(timeout=2000)
+	public void test4() {
+		int[] positions = new int[10000];
+		positions[0] = 1;
+		positions[2] = 100;
+		positions[3] = 150;
+		int L = 1000;
+		assertEquals(4, new FilipTheFrog().countReachableIslands(positions, L));
+	}
 }

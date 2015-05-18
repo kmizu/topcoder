@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class FilipTheFrog {
+	private int callCount = 0;
 	
 	public int countReachableIslands(int[] positions, int L) {
 		int max = Integer.MIN_VALUE;
